@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+</style>
+</head>
+
+<body>
+<form method="POST"}}">
+  <p id="m0"></p>
+  <p id="m1"></p>
+  <p id="m2"></p>
+  <p id="m3"></p>
+  <p id="m4"></p>
+  <p id="m5"></p>
+  <p id="m6"></p>
+  <p id="m7"></p>
+  <p id="m8"></p>
+  <p id="m9"></p>
+  <p id="m10"></p>
+  <p id="m11"></p>
+  <input type="submit" value="Submit" style="margin-left: 4px">
+</form>
+
+<script>
+var lines = [];
+
+{% for item in lines %}
+  lines.push({{ item|safe }});
+{% endfor %}
+
+let daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+for (j = 0; j < 12; j++) {
+  var monthLine = lines[j];
+  console.log(monthLine);
+  for (i = 0; i < daysPerMonth[j]; i++) {
+    var dayInt = monthLine[i];
+    if (dayInt == "1") {
+      var cb = document.createElement('input');
+      cb.type="checkbox";
+      cb.value=dayInt;
+      cb.checked=true;
+      cb.name=("m" + j + "d" + i);
+      document.getElementById("m" + j).appendChild(cb);
+    } else {
+      var cb = document.createElement('input');
+      cb.type="checkbox";
+      cb.value=dayInt;
+      cb.name=("m" + j + "d" + i);
+      document.getElementById("m" + j).appendChild(cb);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
