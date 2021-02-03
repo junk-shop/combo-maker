@@ -57,7 +57,27 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
 
 ### Install Modules & More
 
+We'll need to install a couple things in order to get the project working.
+
 <details><summary><b>Show Instructions</b></summary>
+  
+  1.  Install Python Libraries
+  
+      ```
+      sudo apt install python3-pip
+      sudo pip3 install Pillow (DO I NEED THIS?)
+      sduo pip3 install RPI.GPIO
+      sudo pip3 install spidev
+      ```
+      
+  2.  Install git & more
+  
+      ```
+      sudo apt-get install git
+      sudo apt-get install python3-pil
+      sudo apt-get install python3-numpy
+      sudo apt-get install libopenjp2-7
+      ```
   
 </details>
 
