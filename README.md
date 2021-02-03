@@ -12,7 +12,7 @@ The COMBO MAKER is a small every day calandar counter for your desktop, inspired
 
 We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH and connecting it to the local wireless network.
 
-<details><summary><b>Show Instructions</b></summary>
+<details open><summary><b>Hide/Show Instructions</b></summary>
   
   1.  Use the [Raspberry Pi Imager](https://www.raspberrypi.org/software/) to flash Raspberry Pi OS Lite onto the PI Zero's SD card.
   2.  Open the `boot` folder and create a new file named `ssh`. This will automatically enable SSH.
@@ -59,7 +59,7 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
 
 We'll need to install a couple things in order to get the project working.
 
-<details><summary><b>Show Instructions</b></summary>
+<details open><summary><b>Hide/Show Instructions</b></summary>
   
   1.  Install Python Libraries
   
@@ -83,6 +83,6 @@ We'll need to install a couple things in order to get the project working.
 
 ### Clone This Repo
 
-<details><summary><b>Show Instructions</b></summary>
+<details show><summary><b>Hide/Show Instructions</b></summary>
   
 </details>
