@@ -2,6 +2,8 @@
 
 The COMBO MAKER is a small every day calandar counter for your desktop, inspired by the likes of Simone Giertz's [Everyday Calendar](https://www.youtube.com/watch?v=-lpvy-xkSNA).
 
+![combo-maker](combo-maker.jpg)
+
 ## Materials
 + Raspberry PI Zero WH
 + Waveshare 2.13" e-paper HAT
