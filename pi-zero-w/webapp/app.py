@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-f = open("/home/pi/p-cal/2021.txt")
+f = open("/home/pi/pi-zero-w/2021.txt")
 lines = f.readlines()
 
 daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -27,10 +27,10 @@ def form():
                 monthStr += "0"
         newLines.append(monthStr)
     print(newLines)
-    with open('/home/pi/p-cal/2021.txt', 'w') as f:
+    with open('/home/pi/p-zero-w/2021.txt', 'w') as f:
         for line in newLines:
             f.write("%s\n" % line)
-    os.system('python3 /home/pi/p-cal/epaper/PPT.py')
+    os.system('python3 /home/pi/pi-zero-w/epaper/PPT.py')
     return render_template('index.html', lines=map(json.dumps, newLines))
 
 if __name__ == '__main__':
