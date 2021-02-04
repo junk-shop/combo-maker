@@ -48,9 +48,7 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
       After that, we'll go through the regular housekeeping after install:
       
       ```
-      sudo apt-get update
-      sudo apt-get upgrade
-      sudo reboot
+      sudo apt-get update && sudo apt-get upgrade && sudo reboot
       ```
       
       That marks the Pi Zero ready to be worked on!
@@ -67,18 +65,13 @@ We'll need to install a couple things in order to get the project working.
   
       ```
       sudo apt install python3-pip
-      sudo pip3 install Pillow (DO I NEED THIS?)
-      sduo pip3 install RPI.GPIO
-      sudo pip3 install spidev
+      sudo pip3 install Pillow RPI.GPIO spidev (DO I NEED PILLOW?)
       ```
       
   2.  Install git & more
   
       ```
-      sudo apt-get install git
-      sudo apt-get install python3-pil
-      sudo apt-get install python3-numpy
-      sudo apt-get install libopenjp2-7
+      sudo apt-get install git python3-pil python3-numpy libopenjp2-7
       ```
   
 </details>
@@ -94,6 +87,13 @@ We'll need to install a couple things in order to get the project working.
       ```
       git clone https://github.com/junk-shop/combo-maker/
       ```
+      
+  3.  Move the folder we need and delete the rest (we really just need a way to clone just the subdirectory without the extra files, but this will do for now...)
+  
+      ```
+      mv /home/pi/combo-maker/pi-zero-w /home/pi && rm -rv /home/pi/combo-maker
+      ```
+  
     
 </details>
 
