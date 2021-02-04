@@ -85,6 +85,33 @@ We'll need to install a couple things in order to get the project working.
 
 ### Clone This Repo
 
-<details show><summary><b>Hide/Show Instructions</b></summary>
+<details open><summary><b>Hide/Show Instructions</b></summary>
   
+  1.  Change your directory by typing `cd` and pressing enter.
+  
+  2.  Clone this repo with this command:
+  
+      ```
+      git clone https://github.com/junk-shop/combo-maker/
+      ```
+    
+</details>
+
+### Schedule Scripts to Run at Boot
+
+<details open><summary><b>Hide/Show Instructions</b></summary>
+  
+  1.  Edit the `rc.local` file:
+  
+      ```
+      sudo nano /etc/rc.local
+      ```
+  
+  2.  Add the commands to run the scripts at startup:
+  
+      ```
+      add the commands here
+      this line too
+      ```
+      
 </details>
