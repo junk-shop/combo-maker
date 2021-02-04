@@ -3,25 +3,28 @@ import os
 import logging
 from waveshare_epd import epd2in13_V2
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 from datetime import datetime
-import urllib.request
+
+import traceback    #   TODO - DO I NEED THIS?
 
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("p-cal screen handler initialized")
+    logging.info("COMBO MAKER - Starting screen update!")
 
-    f = open("/home/pi/p-cal/2021.txt")
+    #   OPEN TRACKING FILE FOR THE YEAR
+    #   TODO - MAKE THIS DYNAMIC, CHECK FOR THE YEAR
+    f = open("/home/pi/pi-zero-w/2021.txt")
     lines = f.readlines()
 
+    #   INITIALIZE THE SCREEN AND CLEAR THE FRAME
     epd = epd2in13_V2.EPD()
-    logging.info("init and Clear")
+    logging.info("Initializing & Clearing Screen (IN THAT ORDER!)")
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
 
-    # Drawing on the image
-    logging.info("1.Drawing on the image...")
+    #   BEGIN DRAWING
+    logging.info("Let's Begin Drawing")
     image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(image)
 
@@ -75,7 +78,7 @@ try:
     image = image.rotate(180)
     epd.display(epd.getbuffer(image))
 
-    logging.info("Goto Sleep...")
+    logging.info("Setting Display to Go to Sleep...")
     epd.sleep()
     epd.Dev_exit()
 
