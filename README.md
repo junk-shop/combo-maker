@@ -18,6 +18,7 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
   
   1.  Use the [Raspberry Pi Imager](https://www.raspberrypi.org/software/) to flash Raspberry Pi OS Lite onto the PI Zero's SD card.
   2.  Open the `boot` folder and create a new file named `ssh`. This will automatically enable SSH.
+      + To do this on Windows, I right click > New > Text Document and remove the file extension when renaming.
   3.  In the `boot` folder, create a new file named `wpa_supplicant.conf`. Edit the file and add the following:
       ```
       country=<ENTER TWO-LETTER COUNTRY CODE>
@@ -34,6 +35,12 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
       ```
       ssh pi@raspberrypi
       ```
+      NOTE: If you're anything like me, you may screw things up by this point and want to start over. In case you've SHH'd into your Pi already, you may be presented with a screen saying `WARNING: POSSIBLE DNS SPOOFING DETECTED!` (TODO: PUT A DETAILED EXPLAINER ABOUT WHY THIS HAPPENS HERE). Anyways, to fix this, you can run the following line in PowerShell, of course replacing `hostname` with whichever hostname you entered, or `raspberrypi` for the default:
+      
+      ```
+      ssh-keygen -R hostname
+      ```
+      
       The default password for the `pi` user is `raspberry`.
       You may get a warning about permanently adding the PI to your hosts file, type `yes` when prompted.
       Once in, we'll change some system settings through the build in config menu:
@@ -52,7 +59,7 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
         + Change the timezone
           + Localisation Options > Timezone
 
-      Select `Finish`, this will require a reboot once completed.
+      Select `Finish`, this will require a reboot once completed It should prompt you, if not just do it yourself silly.
       Note: You'll want to use the new hostname and password you entered to SSH into your PI.
       After that, we'll go through the regular housekeeping after install:
       
@@ -80,7 +87,7 @@ We'll need to install a couple things in order to get the project working.
   2.  Install git & more
   
       ```
-      sudo apt-get install git python3-pil python3-numpy libopenjp2-7
+      sudo apt-get install git python3-pil python3-numpy libopenjp2-7 (I DON'T THINK I NEED LIBOPEN EITHER)
       ```
   
 </details>
