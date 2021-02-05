@@ -107,7 +107,7 @@ We'll need to install a couple things in order to get the project working.
   3.  Move the folder we need and delete the rest (we really just need a way to clone just the subdirectory without the extra files, but this will do for now...)
   
       ```
-      mv /home/pi/combo-maker/pi-zero-w /home/pi && rm -rv /home/pi/combo-maker
+      sudo mv /home/pi/combo-maker/pi-zero-w /home/pi && sudo rm -rv /home/pi/combo-maker
       ```
   
     
