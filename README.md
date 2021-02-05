@@ -123,11 +123,12 @@ We'll need to install a couple things in order to get the project working.
       sudo nano /etc/rc.local
       ```
   
-  2.  Add the commands to run the scripts at startup:
+  2.  Add the following lines to the end of the file, before `exit 0`:
   
       ```
-      add the commands here
-      this line too
+      sudo python3 /home/pi/pi-zero-w/epaper/PPT.py &
+      sudo python3 /home/pi/pi-zero-w/webapp/app.py &
       ```
+      TODO: EXPLAIN HOW THIS WORKS AND WHAT THE &s DO
       
 </details>
