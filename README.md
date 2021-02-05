@@ -34,17 +34,26 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
       ```
       ssh pi@raspberrypi
       ```
+      The default password for the `pi` user is `raspberry`.
+      You may get a warning about permanently adding the PI to your hosts file, type `yes` when prompted.
       Once in, we'll change some system settings through the build in config menu:
       ```
       sudo raspi-config
       ```
       We will need to
+        + Update Configuration Tool
+          + Update
         + Change the default password
+          + System Options > Password
         + Change the default hostname
-        + Change the timezone
+          + System Options > Hostname
         + Enable SPI
+          + Interface Options > SPI > Yes
+        + Change the timezone
+          + Localisation Options > Timezone
 
-      This will require a reboot once completed.
+      Select `Finish`, this will require a reboot once completed.
+      Note: You'll want to use the new hostname and password you entered to SSH into your PI.
       After that, we'll go through the regular housekeeping after install:
       
       ```
