@@ -81,7 +81,7 @@ We'll need to install a couple things in order to get the project working.
   
       ```
       sudo apt install python3-pip
-      sudo pip3 install Pillow RPI.GPIO spidev (DO I NEED PILLOW?)
+      sudo pip3 install Pillow RPI.GPIO spidev Flask (DO I NEED PILLOW?)
       ```
       
   2.  Install git & more
