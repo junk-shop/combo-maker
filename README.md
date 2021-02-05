@@ -81,13 +81,13 @@ We'll need to install a couple things in order to get the project working.
   
       ```
       sudo apt install python3-pip
-      sudo pip3 install Pillow RPI.GPIO spidev Flask (DO I NEED PILLOW?)
+      sudo pip3 install RPI.GPIO spidev flask
       ```
       
   2.  Install git & more
   
       ```
-      sudo apt-get install git python3-pil python3-numpy libopenjp2-7 (I DON'T THINK I NEED LIBOPEN EITHER)
+      sudo apt-get install git python3-pil python3-numpy
       ```
   
 </details>
