@@ -8,6 +8,9 @@ The COMBO MAKER is a small every day calandar counter for your desktop, inspired
 + Raspberry PI Zero WH
 + Waveshare 2.13" e-paper HAT
 
+## Assembly
+
+
 ## Installation
 
 ### Raspberry Pi OS Lite
@@ -35,7 +38,7 @@ We'll be using the smallest version of Raspberry Pi OS we can, setting up SSH an
       ```
       ssh pi@raspberrypi
       ```
-      NOTE: If you're anything like me, you may screw things up by this point and want to start over. In case you've SHH'd into your Pi already, you may be presented with a screen saying `WARNING: POSSIBLE DNS SPOOFING DETECTED!` (TODO: PUT A DETAILED EXPLAINER ABOUT WHY THIS HAPPENS HERE). Anyways, to fix this, you can run the following line in PowerShell, of course replacing `hostname` with whichever hostname you entered, or `raspberrypi` for the default:
+      NOTE: If you're anything like me, you may screw things up by this point and want to start over. In case you've SHH'd into your Pi already, you may be presented with a screen saying `WARNING: POSSIBLE DNS SPOOFING DETECTED!`. To fix this, you can run the following line in PowerShell, of course replacing `hostname` with whichever hostname you entered, or `raspberrypi` for the default:
       
       ```
       ssh-keygen -R hostname
@@ -129,6 +132,19 @@ We'll need to install a couple things in order to get the project working.
       sudo python3 /home/pi/pi-zero-w/epaper/PPT.py &
       sudo python3 /home/pi/pi-zero-w/webapp/app.py &
       ```
-      TODO: EXPLAIN HOW THIS WORKS AND WHAT THE &s DO
+      
+      This will run the calendar check script once at boot, and then start up the web app. The ampersands, `&`, allow the scripts to run while the boot continues in the background. Without them, the Pi will not boot.
+      
+### DONE!
+
+At this point, your combo-maker is ready! You should be able to connect to the webpage from any device that's connected to the same network, just go to `hostname:5000` in your web browser.
+
+If you run into any issues, submit them! I'd love to improve this project as much as possible! This is a really rough project but with some polish it can be a really nice tool to have in your life.
       
 </details>
+
+## Planned Features (at the moment!)
+
++ One-Script Installation & Configuration
++ Multiple Calendar Support
++ Leap Year Handling
