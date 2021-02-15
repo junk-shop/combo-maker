@@ -7,8 +7,15 @@ The COMBO MAKER is a small every day calandar counter for your desktop, inspired
 ## Materials
 + Raspberry PI Zero WH
 + Waveshare 2.13" e-paper HAT
++ Right Angle 40-Pin Header for Raspberry Pi
 
 ## Assembly
+(TODO:  UPDATE WITH PICURES)
+
+1. Print the enclosure
+2. Attach the right angle header to the Raspberry Pi
+3. Attach the e-paper display to the header
+4. Place the display face down on a flat surface and carefully bend the right angle pins to a 60 degree angle
 
 
 ## Installation
